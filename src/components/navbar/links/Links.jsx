@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import NavLink from './navLink/navLink';
 
 import styles from './links.module.css';
 
@@ -39,13 +40,13 @@ const Links = () => {
                 {user
                     ? (
                         <>
-                            {isAdmin && <NavLink/>}
+                            {isAdmin && <NavLink item={{ title: 'Admin', path: '/admin' }} />}
                             <form>
                                 <button className={styles.logout}>Logout</button>
                             </form>
                         </>
                     ) : (
-                        <NavLink />
+                        <NavLink item={{ title: 'Login', path: '/login' }} />
                     )
                 }
             </div>
@@ -60,7 +61,7 @@ const Links = () => {
             {open && (
                 <div className={styles.mobileLinks}>
                     {links.map(link => (
-                        <NavLink key={link.title} />
+                        <NavLink key={link.title} item={link} />
                     ))}
                 </div>
             )}
