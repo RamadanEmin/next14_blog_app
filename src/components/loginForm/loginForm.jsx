@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { login } from '@/lib/actions';
 
+import styles from './loginForm.module.css';
+
 const LoginForm = () => {
     const [state, formAction] = useFormState(login, undefined);
 
