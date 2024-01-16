@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import styles from './postCard.module.css';
+
 const PostCard = ({ post }) => {
     return (
         <div className={styles.container}>
