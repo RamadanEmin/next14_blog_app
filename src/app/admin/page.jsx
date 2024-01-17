@@ -1,5 +1,6 @@
-const AdminPage = async () => {
+import styles from './admin.module.css';
 
+const AdminPage = async () => {
     return (
         <div className={styles.container}>
             <div className={styles.row}>
