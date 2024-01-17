@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import styles from './singlePost.module.css';
+
 const getData = async (slug) => {
     const res = await fetch(`http://localhost:3000/api/blog/${slug}`, { cache: 'no-store' });
 
