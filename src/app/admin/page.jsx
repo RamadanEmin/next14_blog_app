@@ -1,3 +1,5 @@
+import AdminPosts from '@/components/adminPosts/adminPosts';
+
 import styles from './admin.module.css';
 
 const AdminPage = async () => {
