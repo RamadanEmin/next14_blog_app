@@ -3,6 +3,8 @@
 import { useFormState } from 'react-dom';
 import { addPost } from '@/lib/actions';
 
+import styles from './adminPostsForm.module.css';
+
 const AdminPostsForm = ({ userId }) => {
     const [state, formAction] = useFormState(addPost, undefined);
 
