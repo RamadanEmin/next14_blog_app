@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { getPosts } from '@/lib/data';
 import { deletePost } from '@/lib/actions';
 
+import styles from './adminPosts.module.css';
+
 const AdminPosts = async () => {
     const posts = await getPosts();
 
