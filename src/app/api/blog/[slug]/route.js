@@ -15,3 +15,17 @@ export const GET = async (request, { params }) => {
         return NextResponse.json({ err: 'Failed to fetch post!' }, { status: 500 });
     }
 };
+
+export const DELETE = async (request, { params }) => {
+    const { slug } = params;
+
+    try {
+        connectToDb();
+        await Post.deleteOne({ slug });
+
+        return NextResponse.json('Post deleted');
+    } catch (err) {
+        console.log(err);
+        return NextResponse.json({ err: 'Failed to delete post!' }, { status: 500 });
+    }
+};
