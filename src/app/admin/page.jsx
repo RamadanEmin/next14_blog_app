@@ -1,6 +1,7 @@
 import { auth } from '@/lib/auth';
 import AdminPosts from '@/components/adminPosts/adminPosts';
 import AdminPostsForm from '@/components/adminPostsForm/adminPostsForm';
+import AdminUsers from '@/components/adminUsers/adminUsers';
 
 import styles from './admin.module.css';
 
