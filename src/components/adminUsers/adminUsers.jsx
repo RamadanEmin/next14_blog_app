@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { getUsers } from '@/lib/data';
 import { deleteUser } from '@/lib/actions';
 
+import styles from './adminUsers.module.css';
+
 const AdminUsers = async () => {
     const users = await getUsers();
 
