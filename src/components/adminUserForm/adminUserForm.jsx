@@ -3,6 +3,8 @@
 import { useFormState } from 'react-dom';
 import { addUser } from '@/lib/actions';
 
+import styles from './adminUserForm.module.css';
+
 const AdminUserForm = () => {
     const [state, formAction] = useFormState(addUser, undefined);
 
